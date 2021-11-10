@@ -18,7 +18,7 @@ console.log(list);
 
 
 const gallery = images.
-  map((image => `<li class='item__gallery'><img src = ${image.url} alt = ${image.alt} width='320'></li>`)).
+  map((image => `<li class='item__gallery'><img src = ${image.url} alt = '${image.alt}' width='320'></li>`)).
   join('');
 
 console.log(gallery);

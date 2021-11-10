@@ -5,7 +5,13 @@ const text = document.querySelector('#name-output');
 input.addEventListener("input", (event) => {
 
     if (event !== '') {
-        text.textContent = event.currentTarget.value;
-    } else {text.textContent = 'Anonymous'}
+      return text.textContent = event.currentTarget.value;  
+    }
+   
 });
 
+input.onblur = function () {
+    if (input.value == '') {
+        return text.textContent = 'Anonymous';
+    }
+}

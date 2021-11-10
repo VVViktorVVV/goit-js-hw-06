@@ -10,18 +10,26 @@ const ingredients = [
 
 const list = document.querySelector('#ingredients');
 
+// const list = document.createElement('ul');
+// list.classList = "ingredients";
+
+
 const createListItems = function (array) {
   
-  for (const element of array) {
+  const newList = [];
+  array.forEach(element => {
   const itemList = document.createElement('li');
   itemList.textContent = element;
   itemList.classList = 'item';
-  list.append(itemList)
-  }
+  newList.push(itemList);
+  });
+  console.log(newList);
+  list.append(...newList);
   return;
 }
 
 createListItems(ingredients);
+
 
 
 
